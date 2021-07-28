@@ -12,7 +12,11 @@ I am trying to write each solution in a fairly functional style which means (to 
 
 Note: you need to create an account on Advent of Code to see the problems, so I tried to give a brief description of the problem in the code.
 
-
 ## Links
 
 You can find the Advent of Code problems at https://adventofcode.com/2020
+
+## Notes
+
+This project was developed using Clojure 1.10.1
+
