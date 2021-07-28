@@ -8,7 +8,7 @@ I am trying to write each solution in a fairly functional style which means (to 
 
 - As few non-pure functions as possible.
 - Defering side effects until the last possible responsible moment.
-- Concretrating side effects (so its easy to see them all at once).
+- Concentrating side effects (so its easy to see them all at once).
 
 Note: you need to create an account on Advent of Code to see the problems, so I tried to give a brief description of the problem in the code.
 
