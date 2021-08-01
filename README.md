@@ -14,15 +14,30 @@ Note: you need to create an account on Advent of Code to see the problems, so I 
 
 ## What I Noticed
 
-The first 6 days were mostly getting back up to speed in LISP & functional programming, and learning how Clojure differs from Racket/Common LISP. Using map, filter, reduce, every? instead of for-loops, getting used to minimizing the amount of state variables, writing pure functions, etc. One thing that did stand out was the joy of the hash-map, vector, and set datastructures over the usual focus of LISPs: lists. 
+### Language Design
 
-By day 7 I wanted to start exploring the clojure.spec feature (which adds a wonderfully flexible type verification system to a dyamically typed language) and Clojure's concurrency primitives. While clojure.spec is overkill for the kind of basic exploratory programming used to solve problems of this type, I thought it would be worth tackling that first.
+The first few days were about getting back up to speed using a LISP (it's been a bit since I've touched Racket), and figuring out some Clojure idioms. The main thing that stood out to me as a great feature of the language is that instead of thinking of all data collections as a list (which is what most LISPs do - and where they get the name LISP), Clojure treats data collections as a sequence. Sequences, in Clojure, are not a data type, but instead an abstraction. Instead of a list in a LISP (eg. Racket) being a collection of cons cells that are accessed via (car) and (cdr), sequences can be built up of anything, and can be accessed through (first) and (rest) This allows CLojure to have lists, hash and sorted maps, hash and sorted sets, and vectors, all be a basic data set, while maintaining the ease of code reuse. 
+
+Rich Hickey - the creator of Clojure - is the first modern language designer I have seen who is a real designer. He is able to build something that is both so simple but with so much functionality that it's beautiful. Maybe I have a type, but I the only language designer that I would put in the same space as Hickey is McCarthy (the original designer of LISP).
+
+### Concurrency
+
+
+### Tail Recursion
+
+Having spent a bit of time working with Racket and Standard ML, I'm used to having tail recursion be a big win for performance in functional programming languages. Unfortunately, the JVM doesn't support tail recursion. Instead, Clojure has a recur function which supposedly provides most of the performance improvements of tail recursion.
+
+But to see how well it works, I used it in the solution to Day 8's Part 2 and came upon something troubling: using recur slows the program down by a factor of 2. I have no idea why this is, but I plan to find out.
+
+### clojure.spec
+
+
 
 ## Links
 
 You can find the Advent of Code problems at https://adventofcode.com/2020
 
-## Notes
+## Misc Notes
 
 This project was developed using Clojure 1.10.1
 
