@@ -86,6 +86,7 @@
 (prn (last (run-program (parse-input-into-vector "input.txt") 0 0)))    
 
 ;; Run Part 2
+(println)
 (println "Running Part 2 using 'recur': ")
 (prn (time (fix-program-using-loop (parse-input-into-vector "input.txt") 0)))
 

@@ -20,6 +20,14 @@ The first few days were about getting back up to speed using a LISP (it's been a
 
 Rich Hickey - the creator of Clojure - is the first modern language designer I have seen who is a real designer. He is able to build something that is both so simple but with so much functionality that it's beautiful. Maybe I have a type, but I the only language designer that I would put in the same space as Hickey is McCarthy (the original designer of LISP).
 
+### Elegance
+
+How would I describe elegance?	
+
+### Pattern Matching / Deconstruction
+
+See pg. 206 of notebook.
+
 ### Concurrency
 
 
@@ -27,7 +35,7 @@ Rich Hickey - the creator of Clojure - is the first modern language designer I h
 
 Having spent a bit of time working with Racket and Standard ML, I'm used to having tail recursion be a big win for performance in functional programming languages. Unfortunately, the JVM doesn't support tail recursion. Instead, Clojure has a recur function which supposedly provides most of the performance improvements of tail recursion.
 
-But to see how well it works, I used it in the solution to Day 8's Part 2 and came upon something troubling: using recur slows the program down by a factor of 2. I have no idea why this is, but I plan to find out.
+But to see how well it works, I used it in the solution to Day 8's Part 2 and found that the two solutions (one using recur and one using normal recursion) were almost identical in terms of time (although whichever one is run first is slower by a factor of 2). It makes sense that recur's main benefit is in memory usage because it does not grow the call stack.
 
 ### clojure.spec
 
