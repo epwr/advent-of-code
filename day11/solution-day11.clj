@@ -70,7 +70,6 @@
                         (if (= cell :floor)
                             (recur (+ dist 1)) cell)))))))
 
-
 ;; Run Part 1 OR Part 2
 ;;
 ;; Use following line to run part 1
@@ -116,9 +115,5 @@
                     (run-tick state)))))
 
 
-
-
-
-
-;; Run Part 1
+;; Run (check rules binding to select either part 1 or part 2)
 (prn (run-simulation "input.txt"))
